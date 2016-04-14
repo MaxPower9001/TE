@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="YahooFinanceAPI-3.1.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/main/resources/YahooFinanceAPI-3.1.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
+    <CLASSES />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/YahooFinanceAPI-3.1.0.zip!/doc" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>

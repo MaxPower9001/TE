@@ -11,10 +11,10 @@ import java.math.BigDecimal;
 
 
 public class mainClass implements Runnable{
-    Stock stock = YahooFinance.get("^FTSE");
-    BigDecimal oldprice = BigDecimal.valueOf(0.0);
+    Stock stock;
 
     public mainClass() throws IOException {
+        stock = YahooFinance.get("^NYA");
     }
 
     public static void main(String args[]) throws IOException {
@@ -23,13 +23,22 @@ public class mainClass implements Runnable{
 
     public void run() {
         while(true) {
-            BigDecimal price = stock.getQuote().getPrice();
-
-            if(price != oldprice){
-                System.out.println(price);
+            try {
+                synchronized (this){
+                    this.wait(2000);
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            BigDecimal price = null;
+            try {
+                price = stock.getQuote(true).getPrice();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
-            oldprice = price;
+            System.out.println(price + "|" + stock.getQuote().getChange() + "(" + stock.getQuote().getChangeInPercent() + "%" + ")");
+            System.out.println("-----------------------------");
         }
     }
 }
