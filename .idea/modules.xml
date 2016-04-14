@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stockAudioTracker.iml" filepath="$PROJECT_DIR$/.idea/modules/stockAudioTracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stockAudioTracker_main.iml" filepath="$PROJECT_DIR$/.idea/modules/stockAudioTracker_main.iml" group="stockAudioTracker" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stockAudioTracker_test.iml" filepath="$PROJECT_DIR$/.idea/modules/stockAudioTracker_test.iml" group="stockAudioTracker" />
+    </modules>
+  </component>
+</project>
